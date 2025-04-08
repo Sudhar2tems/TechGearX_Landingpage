@@ -1,0 +1,773 @@
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 48px; /* Increase text size */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Use a clean, bold font */
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  .logo::before {
+    content: "Tech";
+    color: #00C8FF; /* Light blue color */
+  }
+  
+  .logo::after {
+    content: "X";
+    color: #FF8C00; /* Orange color */
+  }
+  
+  .logo {
+    color: #131313; /* White for "Gear" */
+  }
+  
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  /* Active & Hover Styles */
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #ff4600;
+  }
+  
+  /* Parent Dropdown Positioning */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    width: 200px;
+    border-radius: 6px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Dropdown Menu Items */
+  .dropdown-menu li {
+    padding: 12px 20px;
+    background: white;
+    transition: background 0.3s ease;
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu a {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Hover & Clickable Dropdown */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  /* Hover Effect */
+  .dropdown-menu li:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Mobile Menu Icon */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 10;
+  }
+  
+  /* Menu Styles */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Initially hidden */
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 20;
+    padding: 20px;
+    display: none;
+  
+  }
+  
+  .menu.active {
+    right: 0;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-header img {
+    height: 40px;
+  }
+  
+  .menu-header i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .menu-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .menu-item i {
+    font-size: 14px;
+  }
+  
+  .submenu {
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .submenu .menu-item {
+    background: #f9f9f9;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+  
+  }
+  
+  body {
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+      url('../images/backgroundimg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .shop-btn, .explore-btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .shop-btn {
+    background-color: #0088cc;
+  }
+  
+  .explore-btn {
+    background-color: #ff7c00;
+  }
+  
+  .shop-btn:hover {
+    background-color: #0077aa;
+    transform: scale(1.05);
+  }
+  
+  .explore-btn:hover {
+    background-color: #e66a00;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  
+  /* Product Categories Section */
+  .categories {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+  }
+  
+  .categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Category Grid */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Category Cards */
+  .category-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Category Images */
+  .category-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Category Titles */
+  .category-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  
+  /* Deals & Offers Section */
+  .deals {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .deals h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .deals p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Deal Box - Grid Layout */
+  .deal-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Deal Card */
+  .deal-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .deal-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Deal Images */
+  .deal-card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Deal Titles */
+  .deal-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* Deal Button */
+  .deal-btn {
+    background: #ffcc00;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .deal-btn:hover {
+    background: #ff9900;
+  }
+  
+  /* Blog Section */
+  .blog {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00C8FF;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Blog Grid */
+  .blog-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Blog Card */
+  .blog-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Blog Image */
+  .blog-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Blog Title */
+  .blog-card h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* Read More Button */
+  .blog-btn {
+    background: #00C8FF;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .blog-btn:hover {
+    background: #009fcc;
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black for overlay */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00C8FF; /* Brand blue */
+  }
+  
+  .footer-content p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  .footer-content a {
+    color: #FF8C00; /* Accent color */
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes icons white on dark background */
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  
+  
+  /* Mobile styles (when screen width ≤ 768px) */
+  @media (max-width: 768px) {
+    .top-bar , .fa-search ,.support-btn , .nav-links  {
+        display: none;
+    }
+    
+    /* Menu Icon */
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        display: block; /* Show menu icon */
+    }
+  
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        z-index: 10;
+    }
+  
+    /* Sidebar Menu */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -90%; /* Initially hidden */
+        width: 50%;
+        height: 100%;
+        background: #fff;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 20;
+        padding: 20px;
+        display: block; /* Ensure menu is available on mobile */
+        
+    }
+  
+    .menu.active {
+        right: 0;
+    }
+  
+    .overlay.active {
+        display: block;
+    }
+    .fas{
+      color: #000;
+    }
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .logo-header{
+        font-size: 20px;
+        color: #000;
+    }
+    
+    .logo-header::before {
+        content: "Tech";
+        color: #00C8FF; /* Light blue color */
+    }
+    
+    .logo-header::after {
+        content: "X";
+        color: #FF8C00; /* Orange color */
+    }
+  
+    .logo {
+        font-size: 32px; /* Adjust for smaller screens */
+    }
+  
+    .menu-header i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+  
+    .menu-item {
+        color: #000;
+        padding: 12px 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+    }
+  
+    .menu-item i {
+        font-size: 14px;
+    }
+  
+    .submenu {
+        display: none;
+        padding-left: 20px;
+    }
+  
+    .submenu .menu-item {
+        background: #f9f9f9;
+    }
+  
+    .hero-content {
+      max-width: 90%;
+  }
+  
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+  
+  .shop-btn,
+  .explore-btn {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+  .categories h2 {
+    font-size: 2rem;
+  }
+  
+  .category-card {
+    padding: 15px;
+  }
+  
+  .category-card img {
+    max-width: 150px;
+  }
+  
+  .category-card h3 {
+    font-size: 1rem;
+  }
+  
+  .deals h2 {
+    font-size: 2rem;
+  }
+  
+  .deals p {
+    font-size: 1rem;
+  }
+  
+  .deal-card {
+    padding: 15px;
+  }
+  
+  .deal-card img {
+    max-width: 200px;
+  }
+  
+  .deal-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  
+  .blog h2 {
+    font-size: 2rem;
+  }
+  
+  .blog-card h3 {
+    font-size: 1rem;
+  }
+  
+  .blog-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  
+  .blog-card img {
+    max-width: 100%;
+  }
+  .footer-logo {
+    font-size: 24px;
+  }
+  
+  .footer-content p {
+    font-size: 14px;
+  }
+  
+  .social-links img {
+    width: 25px;
+    height: 25px;
+  }
+  }
+  
+  
+  /* Media Query for Tablets (768px and below) */
+  @media screen and (max-width: 768px) {
+    .logo img  {
+        height: 580px; /* Reduce size for tablets */
+        margin-bottom: 40px;
+    }
+    .menu-header .image {
+        height: 0px;
+    }
+  }
+  
+  /* Media Query for Mobile Devices (480px and below) */
+  @media screen and (max-width: 480px) {
+    .logo img {
+        height: 100px; /* Smaller for mobile */
+        margin-bottom: 20px;
+    }
+    .menu-header .image {
+        height: 50px;
+    }
+  }
+  

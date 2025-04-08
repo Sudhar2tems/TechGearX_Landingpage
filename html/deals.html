@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals & Offers - TechGearX</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/deals.css">
+
+    <script defer src="../javascript/deals.js"></script>
+
+</head>
+<body>
+
+      <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Gear</div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../html/about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">Keyboards</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="#">Headsets</a></li>
+          <li><a href="#">Gaming Accessories</a></li>
+          <li><a href="#">Cables & Adapters</a></li>
+          <li><a href="#">Storage Devices</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../html/deals.html">Deals</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Sidebar Menu -->
+  <div class="menu" id="menu">
+    <div class="menu-header">
+      <div class="logo-header">Gear</div>
+      <i class="fas fa-times" onclick="toggleMenu()"></i>
+    </div>
+    <ul>
+      <li class="menu-item"><a href="../index.html">Home</a></li>
+      <li class="menu-item"><a href="../html/about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+        Products <i class="fas fa-plus"></i>
+      </li>
+
+      <ul class="submenu" id="products-submenu">
+        <li class="menu-item"><a href="#">Keyboards</a></li>
+        <li class="menu-item"><a href="#">Mice</a></li>
+        <li class="menu-item"><a href="#">Headsets</a></li>
+        <li class="menu-item"><a href="#">Gaming Accessories</a></li>
+        <li class="menu-item"><a href="#">Cables & Adapters</a></li>
+        <li class="menu-item"><a href="#">Storage Devices</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
+      <li class="menu-item"><a href="#">Support</a></li>
+      <li class="menu-item"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+
+
+
+  <header class="hero-header">
+    <div class="hero-content">
+      <h1>Deals & Offers - TechGearX</h1>
+      <p>Exclusive Discounts on High-Quality Computer Accessories!</p>
+    </div>
+    <img src="../images/deals.png" alt="Deals & Offers" class="hero-image">
+  </header>
+  
+  <section class="spotlight-offers">
+    <h2>💥 Current Offers & Discounts</h2>
+    <div class="offer-list">
+  
+      <div class="offer-item">
+        <img src="../images/Limiteddeal.png" alt="Limited-Time Deals">
+        <p><strong>Limited-Time Deals:</strong> Up to 40% OFF on keyboards, mice, headsets, and more.</p>
+      </div>
+  
+      <div class="offer-item">
+        <img src="../images/Best-Sellers.jpg" alt="Best-Sellers on Sale">
+        <p><strong>Best-Sellers:</strong> Grab our most popular products at discounted rates!</p>
+      </div>
+  
+      <div class="offer-item">
+        <img src="../images/Student & Office .jpg" alt="Student & Office Essentials">
+        <p><strong>Student & Office Essentials:</strong> Affordable pricing for professionals & students.</p>
+      </div>
+
+      <div class="offer-item">
+        <!-- Show static image first -->
+        <img id="gamingGif" src="../images/RGB-keyboards.webp" alt="Gaming Gear Deals" />
+        <p><strong>Gaming Gear Deals:</strong> Save on RGB keyboards, gaming mice, and headsets.</p>
+      </div>
+      
+      
+    </div>
+    <a href="#" class="btn">Shop Limited-Time Deals</a>
+  </section>
+  
+
+  <section class="bundle-offers">
+    <h2>🎁 Bundle Offers – Buy More, Save More!</h2>
+    <ul class="bundle-list">
+      <li class="bundle-item">
+        <img src="../images/Work From Home Kit.webp" alt="Work From Home Kit">
+        <p><strong>Work From Home Kit:</strong> Keyboard + Mouse + Headset at a special price.</p>
+      </li>
+      <li class="bundle-item">
+        <img src="../images/Gaming Essentials Pack.avif" alt="Gaming Essentials Pack">
+        <p><strong>Gaming Essentials Pack:</strong> RGB Keyboard + Gaming Mouse + Headset – 30% OFF!</p>
+      </li>
+      <li class="bundle-item">
+        <img src="../images/Storage Super Saver.jpg" alt="Storage Super Saver">
+        <p><strong>Storage Super Saver:</strong> Get extra discounts on SSDs & USB drives when purchased together.</p>
+      </li>
+    </ul>
+    <a href="#" class="bundle-btn">Shop Bundle Deals</a>
+  </section>
+  
+
+  <section class="seasonal-offers">
+    <h2>🚀 Festival & Seasonal Discounts</h2>
+    <ul class="seasonal-list">
+      <li class="seasonal-item">
+        <img src="../images/Diwali & New Year Sale.jpg" alt="Diwali & New Year Sale" />
+        <p><strong>Diwali & New Year Sale:</strong> Huge discounts on all tech gear!</p>
+      </li>
+      <li class="seasonal-item">
+        <img src="../images/Student Discounts.jpg" alt="Student Discounts" />
+        <p><strong>Student Discounts:</strong> Get special pricing with a valid student ID.</p>
+      </li>
+      <li class="seasonal-item">
+        <img src="../images/Loyalty Rewards.jpg" alt="Loyalty Rewards" />
+        <p><strong>Loyalty Rewards:</strong> Earn points & redeem them for future purchases.</p>
+      </li>
+    </ul>
+  
+    <div class="newsletter-box">
+      <p>💡 Subscribe to our newsletter for early access to deals & exclusive discount codes!</p>
+      <img src="../images/Subscribe.jpg" alt="Subscribe" />
+      <a href="#" class="subscribe-btn">Subscribe Now</a>
+    </div>
+  </section>
+  
+<!-- Community Section -->
+<section id="tgx-community-section" class="tgx-community-section">
+  <div class="tgx-community-container">
+    <h3 class="tgx-community-heading">Join the TechGearX Community</h3>
+    <p class="tgx-community-paragraph">
+      We are not just a company; we are a community of tech enthusiasts who believe in the power of great
+      accessories.
+      Follow us for the latest updates, product launches, and exclusive deals.
+    </p>
+
+    <p class="tgx-community-paragraph"><strong>📌 Follow Us On:</strong></p>
+    <ul class="tgx-community-list tgx-community-links">
+      <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+      <li><a class="instagram" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a class="twitter" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+      <li><a class="youtube" href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+    </ul>
+
+    <p class="tgx-community-paragraph"><strong>📩 For Business Inquiries & Partnerships:</strong><br>
+      <a href="mailto:partnerships@techgearx.com">partnerships@techgearx.com</a>
+    </p>
+  </div>
+</section>
+
+    
+</body>
+</html>

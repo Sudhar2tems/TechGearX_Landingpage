@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGearX - Premium Computer Accessories</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script defer src="./javascript/index.js"></script>
+</head>
+<body>
+
+       
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Gear</div>
+
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+           
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+           
+                <ul class="dropdown-menu">
+                    <li><a href="#">Keyboards</a></li>
+                    <li><a href="#">Mice</a></li>
+                    <li><a href="#">Headsets</a></li>
+                    <li><a href="#">Gaming Accessories</a></li>
+                    <li><a href="#">Cables & Adapters</a></li>
+                    <li><a href="#">Storage Devices</a></li>
+                </ul>
+            </li>
+           
+            <li><a href="./html/deals.html">Deals</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="menu" id="menu">
+        <div class="menu-header">
+            <div class="logo-header">Gear</div>
+            <i class="fas fa-times" onclick="toggleMenu()"></i>
+        </div>
+        <ul>
+            <li class="menu-item"><a href="./index.html">Home</a></li>
+            <li class="menu-item"><a href="../html/about.html">About</a></li>
+            
+            <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+                Products <i class="fas fa-plus"></i>
+            </li>
+            
+            <ul class="submenu" id="products-submenu">
+                <li class="menu-item"><a href="#">Keyboards</a></li>
+                <li class="menu-item"><a href="#">Mice</a></li>
+                <li class="menu-item"><a href="#">Headsets</a></li>
+                <li class="menu-item"><a href="#">Gaming Accessories</a></li>
+                <li class="menu-item"><a href="#">Cables & Adapters</a></li>
+                <li class="menu-item"><a href="#">Storage Devices</a></li>
+            </ul>
+            
+            <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
+            <li class="menu-item"><a href="#">Support</a></li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering Your Digital Experience</h1>
+            <p>Find the perfect gear for work, gaming, and productivity.</p>
+            <button class="shop-btn">Shop Now</button>
+            <button class="explore-btn">Explore Collections</button>
+        </div>
+    </section>
+
+
+    <!-- Product Categories -->
+    <section class="categories">
+        <h2>Explore Our Product Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="./images/Keyboard.jpg" alt="Keyboards">
+                <h3>Keyboards & Mice</h3>
+            </div>
+            <div class="category-card">
+                <img src="./images/Headset.jpg" alt="Headsets">
+                <h3>Audio & Headsets</h3>
+            </div>
+            <div class="category-card">
+                <img src="./images/GamingAccessories.webp" alt="Gaming Accessories">
+                <h3>Gaming Accessories</h3>
+            </div>
+            <div class="category-card">
+                <img src="./images/Cables.jpeg" alt="Cables & Adapters">
+                <h3>Cables & Adapters</h3>
+            </div>
+        </div>
+    </section>
+
+        <!-- Deals & Offers -->
+        <section class="deals">
+            <h2>Exclusive Deals & Discounts</h2>
+            <p>🔥 Save up to <strong>40%</strong> on select products. Hurry before the offer ends!</p>
+            <div class="deal-box">
+                <div class="deal-card">
+                    <img src="./images/Mechanical.webp" alt="Deal Product">
+                    <h3>Mechanical Keyboard - 30% Off</h3>
+                    <button class="deal-btn">Shop Now</button>
+                </div>
+                <div class="deal-card">
+                    <img src="./images/Wireless.webp" alt="Deal Product">
+                    <h3>Wireless Gaming Mouse - 25% Off</h3>
+                    <button class="deal-btn">Shop Now</button>
+                </div>
+            </div>
+        </section>
+      
+            <!-- Blog & Insights -->
+    <section class="blog">
+        <h2>Latest Insights & Tech Trends</h2>
+        <div class="blog-box">
+            <div class="blog-card">
+                <img src="./images/blog1.jpg" alt="Blog Post">
+                <h3>Top 5 Mechanical Keyboards for Productivity & Gaming</h3>
+                <button class="blog-btn">Read More</button>
+            </div>
+            <div class="blog-card">
+                <img src="./images/blog2.jpg" alt="Blog Post">
+                <h3>The Future of Wireless Accessories – What to Expect?</h3>
+                <button class="blog-btn">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">TechGearX</div>
+            <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
+                08050</p>
+            <p>📍 Location: Chennai, India</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f">  Facebook</i></a>
+                <a href="#"><i class="fab fa-instagram">  Instagram</i></a>
+                <a href="#"><i class="fab fa-twitter">  Twitter</i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

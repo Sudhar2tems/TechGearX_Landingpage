@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About- TechGearX</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/about.css">
+
+  <script defer src="../javascript/about.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Gear</div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../html/about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">Keyboards</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="#">Headsets</a></li>
+          <li><a href="#">Gaming Accessories</a></li>
+          <li><a href="#">Cables & Adapters</a></li>
+          <li><a href="#">Storage Devices</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../html/deals.html">Deals</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Sidebar Menu -->
+  <div class="menu" id="menu">
+    <div class="menu-header">
+      <div class="logo-header">Gear</div>
+      <i class="fas fa-times" onclick="toggleMenu()"></i>
+    </div>
+    <ul>
+      <li class="menu-item"><a href="../index.html">Home</a></li>
+      <li class="menu-item"><a href="../html/about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+        Products <i class="fas fa-plus"></i>
+      </li>
+
+      <ul class="submenu" id="products-submenu">
+        <li class="menu-item"><a href="#">Keyboards</a></li>
+        <li class="menu-item"><a href="#">Mice</a></li>
+        <li class="menu-item"><a href="#">Headsets</a></li>
+        <li class="menu-item"><a href="#">Gaming Accessories</a></li>
+        <li class="menu-item"><a href="#">Cables & Adapters</a></li>
+        <li class="menu-item"><a href="#">Storage Devices</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
+      <li class="menu-item"><a href="#">Support</a></li>
+      <li class="menu-item"><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <main class="main-content">
+    <!-- About TechGearX Section -->
+    <section id="about-techgearx-section" class="about-techgearx-section">
+      <div class="about-techgearx-container">
+        <h1 class="about-techgearx-title">About Us - TechGearX</h1>
+        <h2 class="about-techgearx-subtitle">
+          Empowering Your Digital Lifestyle with Innovation & Quality
+        </h2>
+
+        <div class="about-techgearx-card">
+          <p>
+            At <strong>TechGearX</strong>, we are passionate about bringing cutting-edge computer accessories that
+            enhance your productivity, gaming experience, and overall digital life.
+            Whether you’re a professional, gamer, student, or tech enthusiast, we provide top-quality peripherals
+            designed to meet your needs with precision, comfort, and reliability.
+          </p>
+        </div>
+
+        <div class="about-techgearx-card">
+          <p>
+            Our journey began with a simple vision — to make high-performance computer accessories accessible to
+            everyone.
+            Today, we continue to push the boundaries of innovation, delivering premium products that seamlessly
+            integrate with your digital world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Who We Are Section -->
+    <section id="who-we-are-section" class="who-we-are-section">
+      <div class="who-we-are-container">
+        <h3 class="who-we-are-heading">Who We Are?</h3>
+        <div class="who-we-are-content">
+          <div class="who-we-are-text">
+            <p class="who-we-are-paragraph">
+              <strong>TechGearX</strong> is more than just a brand—it’s a commitment to excellence. We are a team of
+              passionate tech lovers, engineers, and designers dedicated to crafting accessories that redefine the way
+              you work and play.
+            </p>
+            <ul class="who-we-are-list">
+              <li><strong><span class="who-we-are-icon">✔</span> Quality-Focused</strong> – Each product undergoes
+                rigorous testing to ensure durability and efficiency.</li>
+              <li><strong><span class="who-we-are-icon">✔</span> Customer-Centric</strong> – Your satisfaction is our
+                top
+                priority. We listen to our customers and evolve with their needs.</li>
+              <li><strong><span class="who-we-are-icon">✔</span> Innovation-Driven</strong> – We stay ahead of
+                technology
+                trends to bring you the latest advancements in computer accessories.</li>
+            </ul>
+          </div>
+          <div class="who-we-are-image">
+            <img src="../images/whoweare.jpeg" alt="Who we are">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- What We Offer Section -->
+    <section id="tgx-offer-section" class="tgx-offer-section">
+      <div class="tgx-offer-container">
+        <div class="tgx-offer-image-wrapper">
+          <img src="../images/whatweoffer.avif" alt="What we offer" class="tgx-offer-image">
+        </div>
+        <div class="tgx-offer-content">
+          <h3 class="tgx-offer-heading">What We Offer</h3>
+          <p class="tgx-offer-description">
+            Every product is designed with the user in mind, ensuring comfort, reliability, and superior performance.
+          </p>
+          <ul class="tgx-offer-list">
+            <li><span class="tgx-offer-icon">🖱️</span> <strong>High-Performance Keyboards & Mice</strong> – Ergonomic,
+              mechanical, and wireless options tailored for professionals and gamers.</li>
+            <li><span class="tgx-offer-icon">🎧</span> <strong>Crystal-Clear Audio & Headsets</strong> – Superior sound
+              quality for work, gaming, and entertainment.</li>
+            <li><span class="tgx-offer-icon">🎮</span> <strong>Gaming Accessories</strong> – Precision-driven gear that
+              gives you the competitive edge.</li>
+            <li><span class="tgx-offer-icon">🔌</span> <strong>Reliable Cables & Adapters</strong> – High-speed
+              connectivity solutions for seamless device integration.</li>
+            <li><span class="tgx-offer-icon">💾</span> <strong>Secure Storage Solutions</strong> – Fast and efficient
+              storage devices to keep your data safe.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Mission & Vision Section -->
+    <section id="tgx-mission-vision-section" class="tgx-mission-vision-section">
+      <div class="tgx-mission-vision-container">
+        <div class="tgx-mission-vision-image-wrapper">
+          <img src="../images/mission.jpg" alt="Mission and Vision" class="tgx-mission-vision-image">
+        </div>
+        <div class="tgx-mission-vision-content">
+          <h3 class="tgx-mission-vision-heading">Our Mission & Vision</h3>
+          <p class="tgx-mission-vision-paragraph">
+            <strong>Mission:</strong><br>
+            To enhance digital experiences by providing high-quality, innovative, and affordable computer accessories
+            that meet the diverse needs of users worldwide.
+          </p>
+          <p class="tgx-mission-vision-paragraph">
+            <strong>Vision:</strong><br>
+            To be the leading global provider of premium tech accessories, recognized for our commitment to quality,
+            performance, and customer satisfaction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="tgx-why-choose-us-section" class="tgx-why-choose-us-section">
+      <div class="tgx-why-choose-us-container">
+        <div class="tgx-why-choose-us-image" data-aos="fade-right">
+          <img src="../images/whychooseus.png" alt="Why Choose TechGearX">
+        </div>
+        <div class="tgx-why-choose-us-text" data-aos="fade-left">
+          <h3 class="tgx-why-choose-us-heading">Why Choose <span>TechGearX?</span></h3>
+          <div class="tgx-why-choose-us-feature-box">
+            <div class="tgx-why-choose-us-icon">✔️</div>
+            <div class="tgx-why-choose-us-content">
+              <strong>Premium Quality</strong> – We use the best materials and technology to ensure our products meet
+              the highest standards.
+            </div>
+          </div>
+          <div class="tgx-why-choose-us-feature-box">
+            <div class="tgx-why-choose-us-icon">✔️</div>
+            <div class="tgx-why-choose-us-content">
+              <strong>Affordable Pricing</strong> – Cutting-edge accessories without the high price tag.
+            </div>
+          </div>
+          <div class="tgx-why-choose-us-feature-box">
+            <div class="tgx-why-choose-us-icon">✔️</div>
+            <div class="tgx-why-choose-us-content">
+              <strong>Customer Support Excellence</strong> – 24/7 assistance for any queries or concerns.
+            </div>
+          </div>
+          <div class="tgx-why-choose-us-feature-box">
+            <div class="tgx-why-choose-us-icon">✔️</div>
+            <div class="tgx-why-choose-us-content">
+              <strong>Fast & Secure Shipping</strong> – Reliable delivery across the country.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="tgx-community-section" class="tgx-community-section">
+      <div class="tgx-community-container">
+        <h3 class="tgx-community-heading">Join the TechGearX Community</h3>
+        <p class="tgx-community-paragraph">
+          We are not just a company; we are a community of tech enthusiasts who believe in the power of great
+          accessories.
+          Follow us for the latest updates, product launches, and exclusive deals.
+        </p>
+
+        <p class="tgx-community-paragraph"><strong>📌 Follow Us On:</strong></p>
+        <ul class="tgx-community-list tgx-community-links">
+          <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a class="instagram" href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a class="twitter" href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a class="youtube" href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+
+        <p class="tgx-community-paragraph"><strong>📩 For Business Inquiries & Partnerships:</strong><br>
+          <a href="mailto:partnerships@techgearx.com">partnerships@techgearx.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
+
+</body>
+
+</html>
+
+
