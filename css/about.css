@@ -204,106 +204,92 @@
   
   }
 
-  .main-content {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  }
+  
   
   /* General Container */
-/* Section Wrapper */
-.about-techgearx-section {
-  padding: 60px;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Inner Container */
-.about-techgearx-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Title */
-.about-techgearx-title {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00fff7;
-  text-shadow: 2px 2px #000;
-  animation: fadeInTop 1s ease forwards;
-}
-
-/* Subtitle */
-.about-techgearx-subtitle {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #ffffffcc;
-  margin-bottom: 40px;
-  animation: fadeInTop 1.2s ease forwards;
-}
-
-/* Cards */
-.about-techgearx-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 25px 30px;
-  margin: 20px 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 1.3s ease forwards;
-}
-
-.about-techgearx-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-}
-
-/* Paragraphs */
-.about-techgearx-card p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #e0e0e0;
-}
-
-/* Animations */
-@keyframes fadeInTop {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  /* Image Banner */
+  
+  .about-image-container {
+    max-width: 1000px; /* same as Grafdom layout */
+    margin: 0 auto;     /* centers the container */
+    padding: 0 15px;    /* optional padding for small screens */
   }
-}
+  
+  .about-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+  /* Text Section */
+  .about-content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .about-content h2 {
+    color: #222;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    border-left: 5px solid #007f2d;
+    padding-left: 10px;
   }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-techgearx-title {
-    font-size: 2.2rem;
+  
+  .about-content h3 {
+    color: #007f2d;
+    margin-top: 30px;
+    font-size: 1.4rem;
   }
-
-  .about-techgearx-subtitle {
-    font-size: 1.2rem;
+  
+  .about-content p {
+    margin-bottom: 16px;
   }
-
-  .about-techgearx-card {
-    padding: 20px;
+  
+  .about-content .highlight {
+    color: #007f2d;
+    font-weight: 600;
   }
-}
-
+  
+  .about-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .about-content li {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-image-title {
+      font-size: 1.2rem;
+      padding: 8px 16px;
+    }
+  
+    .about-content h2 {
+      font-size: 1.4rem;
+    }
+  
+    .about-content h3 {
+      font-size: 1.2rem;
+    }
+  
+    .about-content, .about-image-container {
+      padding: 0 15px;
+    }
+  }
+  
 /* WHO WE ARE Section */
 #who-we-are-section {
   color: #ffffff;
