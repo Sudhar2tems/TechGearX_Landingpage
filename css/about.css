@@ -365,6 +365,9 @@
   .who-we-are-text {
     flex: 1 1 100%;
   }
+  .who-we-are-paragraph{
+    text-align: justify;
+  }
 
   .who-we-are-image {
     flex: 1 1 100%;
@@ -456,6 +459,10 @@
     text-align: left;
     margin-top: 20px;
   }
+  .tgx-offer-description{
+    text-align: justify;
+  }
+
 }
 
 
@@ -670,7 +677,6 @@
   background-color: #222;
   padding: 10px 14px;
   border-radius: 8px;
-  color: #FF8C00;
   font-size: 16px;
   display: inline-flex;
   align-items: center;
