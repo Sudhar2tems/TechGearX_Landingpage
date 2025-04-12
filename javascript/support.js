@@ -31,4 +31,29 @@ document.addEventListener("click", function (event) {
 
 
 
+document.getElementById("warrantyForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page refresh
+
+    const model = document.getElementById("model").value.trim();
+    const serial = document.getElementById("serial").value.trim();
+
+    if (model && serial) {
+      alert(`Tracking warranty for Model: ${model}, Serial: ${serial}`);
+      // You can replace the alert with actual API call or redirect
+    } else {
+      alert("Please fill in both fields.");
+    }
+  });
+
+
+
+  const headers = document.querySelectorAll(".accordion-header");
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle("active");
+        header.classList.toggle("open");
+      });
+    });
+
 

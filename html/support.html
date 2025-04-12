@@ -83,53 +83,66 @@
   </div>
 
   <div class="warranty-main">
-    <!-- ✅ Check Warranty Form -->
-    <div class="tab-content active" id="check-warranty">
-      <h3 class="warranty-subtitle">Track Warranty Status</h3>
-      <img src="../images/warrantycheck-pc.webp" alt="warranty-main">
-      <p class="warranty-description">
-        Track the status of your product's warranty by entering the required information below.
-      </p>
-      <form class="warranty-form">
-        <label for="model">Model Number</label>
-        <input type="text" id="model" name="model" placeholder="Enter model number" required>
-  
-        <label for="serial">Serial Number</label>
-        <input type="text" id="serial" name="serial" placeholder="Enter serial number" required>
-  
-        <button type="submit" class="btn-submit">Submit</button>
-      </form>
-    </div>
-  
-    <!-- 🔄 Request Warranty Service (Placeholder for now) -->
-    <div class="tab-content" id="request-service">
-      <h3 class="warranty-subtitle">Request Warranty Service</h3>
-      <p class="warranty-description">Fill out the service form to initiate a warranty claim. (Coming soon)</p>
-    </div>
-  
-    <!-- 🛡️ Warranty Policy Section -->
-    <div class="tab-content" id="warranty-policy">
-      <h3 class="warranty-subtitle">🛡️ Warranty Policy</h3>
-      <ul class="policy-list">
-        <li> <strong>Standard Warranty:</strong> All our products come with a minimum 1-year warranty.</li>
-        <li> <strong>Replacement Policy:</strong> Free replacement for defective products under warranty.</li>
-        <li> <strong>Money-Back Guarantee:</strong> Return within 7 days for a full refund if unsatisfied.</li>
-      </ul>
-      <h4>📌 Warranty Coverage Includes:</h4>
-      <ul class="policy-list">
-        <li> Manufacturing Defects – Issues related to build quality.</li>
-        <li> Functionality Issues – Malfunctioning accessories.</li>
-        <li> Connectivity Problems – Bluetooth, USB, or wired device issues.</li>
-      </ul>
-      <h4>🚫 Warranty Does Not Cover:</h4>
-      <ul class="policy-list">
-        <li> Physical damage or misuse.</li>
-        <li> Water or fire damage.</li>
-        <li> Unauthorized modifications.</li>
-      </ul>
-      <a href="#" class="btn-submit">Check Warranty Details</a>
+    <div class="hero-banner">
+      <div class="hero-overlay">
+        <h1 class="hero-title">
+          Track the status of your product's warranty by entering the required information below.
+        </h1>
+        <a href="#check-warranty" class="hero-button">Let's get started</a>
+      </div>
     </div>
   </div>
+  
+  
+  <div class="warranty-form-container">
+    <form class="warranty-form" id="warrantyForm">
+      <h2>Check Your Warranty</h2>
+  
+      <label for="model">Model Number</label>
+      <input type="text" id="model" name="model" placeholder="Enter model number" required>
+  
+      <label for="serial">Serial Number</label>
+      <input type="text" id="serial" name="serial" placeholder="Enter serial number" required>
+  
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+  
+    
+  
+    <!-- 🛡️ Warranty Policy Section -->
+    <div class="container">
+      <h1>🛡️ Warranty Policy</h1>
+      <p>
+        📅 <strong>Standard Warranty:</strong> All our products come with a minimum 1-year warranty.<br>
+        🔄 <strong>Replacement Policy:</strong> Get a free replacement for defective products under warranty.<br>
+        💰 <strong>Money-Back Guarantee:</strong> If you’re unsatisfied, return within 7 days for a refund. 
+      </p>
+  
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">📌 Warranty Coverage Includes</button>
+          <div class="accordion-content">
+            <ul>
+              <li>✔️ Manufacturing Defects – Issues related to build quality.</li>
+              <li>✔️ Functionality Issues – Malfunctioning accessories.</li>
+              <li>✔️ Connectivity Problems – Issues with Bluetooth, USB, or wired devices.</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <button class="accordion-header">🚫 Warranty Does Not Cover</button>
+          <div class="accordion-content">
+            <ul>
+              <li>❌ Physical damage or misuse.</li>
+              <li>❌ Water or fire damage.</li>
+              <li>❌ Unauthorized modifications.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   
     <section class="support-container">
         <div class="support-content">
@@ -146,6 +159,20 @@
         </div>
       </section>
 
+ <!-- Footer Section -->
+ <footer>
+  <div class="footer-content">
+      <div class="footer-logo">TechGearX</div>
+      <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
+          08050</p>
+      <p>📍 Location: Chennai, India</p>
+      <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+  </div>
+</footer>
 
 
 </body>
