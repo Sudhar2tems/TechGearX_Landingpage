@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Warranty - TechGearX </title>
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="../css/support.css">
+      <!-- Js -->
+      <script defer src="../javascript/support.js"></script>
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Gear</div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../html/about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">Keyboards</a></li>
+          <li><a href="#">Mice</a></li>
+          <li><a href="#">Headsets</a></li>
+          <li><a href="#">Gaming Accessories</a></li>
+          <li><a href="#">Cables & Adapters</a></li>
+          <li><a href="#">Storage Devices</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../html/deals.html">Deals</a></li>
+      <li><a href="../html/support.html">Support</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
+
+
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+  </nav>
+
+  <!-- Mobile Menu -->
+
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Sidebar Menu -->
+  <div class="menu" id="menu">
+    <div class="menu-header">
+      <div class="logo-header">Gear</div>
+      <i class="fas fa-times" onclick="toggleMenu()"></i>
+    </div>
+    <ul>
+      <li class="menu-item"><a href="../index.html">Home</a></li>
+      <li class="menu-item"><a href="../html/about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+        Products <i class="fas fa-plus"></i>
+      </li>
+
+      <ul class="submenu" id="products-submenu">
+        <li class="menu-item"><a href="#">Keyboards</a></li>
+        <li class="menu-item"><a href="#">Mice</a></li>
+        <li class="menu-item"><a href="#">Headsets</a></li>
+        <li class="menu-item"><a href="#">Gaming Accessories</a></li>
+        <li class="menu-item"><a href="#">Cables & Adapters</a></li>
+        <li class="menu-item"><a href="#">Storage Devices</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
+      <li class="menu-item"><a href="../html/support.html">Support</a></li>
+      <li class="menu-item"><a href="../html/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="warranty-main">
+    <!-- ✅ Check Warranty Form -->
+    <div class="tab-content active" id="check-warranty">
+      <h3 class="warranty-subtitle">Track Warranty Status</h3>
+      <img src="../images/warrantycheck-pc.webp" alt="warranty-main">
+      <p class="warranty-description">
+        Track the status of your product's warranty by entering the required information below.
+      </p>
+      <form class="warranty-form">
+        <label for="model">Model Number</label>
+        <input type="text" id="model" name="model" placeholder="Enter model number" required>
+  
+        <label for="serial">Serial Number</label>
+        <input type="text" id="serial" name="serial" placeholder="Enter serial number" required>
+  
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  
+    <!-- 🔄 Request Warranty Service (Placeholder for now) -->
+    <div class="tab-content" id="request-service">
+      <h3 class="warranty-subtitle">Request Warranty Service</h3>
+      <p class="warranty-description">Fill out the service form to initiate a warranty claim. (Coming soon)</p>
+    </div>
+  
+    <!-- 🛡️ Warranty Policy Section -->
+    <div class="tab-content" id="warranty-policy">
+      <h3 class="warranty-subtitle">🛡️ Warranty Policy</h3>
+      <ul class="policy-list">
+        <li> <strong>Standard Warranty:</strong> All our products come with a minimum 1-year warranty.</li>
+        <li> <strong>Replacement Policy:</strong> Free replacement for defective products under warranty.</li>
+        <li> <strong>Money-Back Guarantee:</strong> Return within 7 days for a full refund if unsatisfied.</li>
+      </ul>
+      <h4>📌 Warranty Coverage Includes:</h4>
+      <ul class="policy-list">
+        <li> Manufacturing Defects – Issues related to build quality.</li>
+        <li> Functionality Issues – Malfunctioning accessories.</li>
+        <li> Connectivity Problems – Bluetooth, USB, or wired device issues.</li>
+      </ul>
+      <h4>🚫 Warranty Does Not Cover:</h4>
+      <ul class="policy-list">
+        <li> Physical damage or misuse.</li>
+        <li> Water or fire damage.</li>
+        <li> Unauthorized modifications.</li>
+      </ul>
+      <a href="#" class="btn-submit">Check Warranty Details</a>
+    </div>
+  </div>
+  
+    <section class="support-container">
+        <div class="support-content">
+          <h4 class="subtitle">📞 Need Support? We’re Here to Help!</h4>
+          <h1 class="main-title">Contact TechGearX Support</h1>
+          <p>💬 Live Chat: 24/7 support available.<br>
+             📞 Call Us: +91 00000 00000<br>
+             📧 Email: support@techgearx.com
+          </p>
+          <a href="#" class="btn-support">Contact Support</a>
+        </div>
+        <div class="support-image">
+          <img src="../images/Support.png" alt="TechGearX Support Team" />
+        </div>
+      </section>
+
+
+
+</body>
+</html>
