@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="../images/favicon.jpg" sizes="32x32">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/headset.css">
+
+    <script defer src="../javascript/headset.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Gear</div>
+
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/about.html">About</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="./html/keyboard.html">Keyboards</a></li>
+                    <li><a href="#">Mice</a></li>
+                    <li><a href="#">Headsets</a></li>
+                    <li><a href="#">Gaming Accessories</a></li>
+                    <li><a href="#">Cables & Adapters</a></li>
+                    <li><a href="#">Storage Devices</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./html/deals.html">Deals</a></li>
+            <li><a href="./html/support.html">Support</a></li>
+            <li><a href="../html/blog.html">Blog & Insights</a></li>
+            <li><a href="./html/contact.html\">Contact</a></li>
+        </ul>
+
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="menu" id="menu">
+        <div class="menu-header">
+            <div class="logo-header">Gear</div>
+            <i class="fas fa-times" onclick="toggleMenu()"></i>
+        </div>
+        <ul>
+            <li class="menu-item"><a href="./index.html">Home</a></li>
+            <li class="menu-item"><a href="./html/about.html">About</a></li>
+
+            <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+                Products <i class="fas fa-plus"></i>
+            </li>
+
+            <ul class="submenu" id="products-submenu">
+                <li class="menu-item"><a href="./html/keyboard.html">Keyboards</a></li>
+                <li class="menu-item"><a href="#">Mice</a></li>
+                <li class="menu-item"><a href="#">Headsets</a></li>
+                <li class="menu-item"><a href="#">Gaming Accessories</a></li>
+                <li class="menu-item"><a href="#">Cables & Adapters</a></li>
+                <li class="menu-item"><a href="#">Storage Devices</a></li>
+            </ul>
+
+            <li class="menu-item"><a href="./html/deals.html">Deals</a></li>
+            <li class="menu-item"><a href="./html/support.html">Support</a></li>
+            <li class="menu-item"><a href="../html/blog.html">Blog & Insights</a></li>
+            <li class="menu-item"><a href="./html/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="hero-section">
+        <div class="first-hero">
+            <img src="../images/Headphone-Zone-focal-bath-MG-Home-page-banner-desktop.webp" alt="Mouse Hero Banner"
+                class="hero-img">
+        </div>
+
+        <div class="hero-text">
+            <div class="hero-subheading">INTRODUCING</div>
+            <h1 class="hero-heading">
+                Mice – Accuracy &amp; Speed at Your Fingertips
+            </h1>
+            <button class="hero-button">Shop Mice</button>
+        </div>
+    </section>
+
+
+    <div class="hero-content">
+        <div class="video-container">
+            <video src="../images/headphonvedio.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="text-container">
+            <h2>
+                A perfect mouse makes all the difference! Our collection includes wired, wireless, and gaming mice with
+            </h2>
+        </div>
+    </div>
+
+
+
+    <div class="hero-list-wrapper">
+        <div class="hero-list">
+            <div class="feature-item">
+                <img src="../images/High-Precision Sensors.jpg" alt="High-Precision Sensor Icon">
+                <div>High-Precision Sensors – Ultra-responsive tracking for gaming and professional work.</div>
+            </div>
+            <div class="feature-item">
+                <img src="../images/Customizable Buttons.webp" alt="Customizable Buttons Icon">
+                <div>Customizable Buttons – Assign functions for quick access and efficiency.</div>
+            </div>
+            <div class="feature-item">
+                <img src="../images/Ergonomic Grip.jpg" alt="Ergonomic Grip Icon">
+                <div>Ergonomic Grip – Comfortable design for extended usage.</div>
+            </div>
+            <div class="feature-item">
+                <img src="../images/RGB & Adjustable DPI.jpg" alt="RGB & DPI Icon">
+                <div>RGB & Adjustable DPI – Personalize your setup and adjust speed as needed.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">TechGearX</div>
+            <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
+                08050</p>
+            <p>📍 Location: Chennai, India</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
