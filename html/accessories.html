@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" href="../images/favicon.jpg" sizes="32x32">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/headset.css">
+    <link rel="stylesheet" href="../css/accessories.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
-    <script defer src="../javascript/headset.js"></script>
+
+    <script defer src="../javascript/accessories.js"></script>
 </head>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -21,13 +21,13 @@
 
         <ul class="nav-links">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./html/about.html">About</a></li>
+            <li><a href="../html/about.html">About</a></li>
 
             <li class="dropdown">
                 <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
 
                 <ul class="dropdown-menu">
-                    <li><a href="./html/keyboard.html">Keyboards</a></li>
+                    <li><a href="../html/keyboard.html">Keyboards</a></li>
                     <li><a href="../html/mice.html">Mice</a></li>
                     <li><a href="../html/headset.html">Headsets</a></li>
                     <li><a href="../html/accessories.html">Gaming Accessories</a></li>
@@ -36,10 +36,10 @@
                 </ul>
             </li>
 
-            <li><a href="./html/deals.html">Deals</a></li>
-            <li><a href="./html/support.html">Support</a></li>
+            <li><a href="../html/deals.html">Deals</a></li>
+            <li><a href="../html/support.html">Support</a></li>
             <li><a href="../html/blog.html">Blog & Insights</a></li>
-            <li><a href="./html/contact.html\">Contact</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
         </ul>
 
 
@@ -84,71 +84,53 @@
             <li class="menu-item"><a href="../html/contact.html">Contact</a></li>
         </ul>
     </div>
-
-    <section class="hero-section">
-        <div class="first-hero">
-            <img src="../images/Headphone-Zone-focal-bath-MG-Home-page-banner-desktop.webp" alt="Mouse Hero Banner"
-                class="hero-img">
-        </div>
-
+    
+    <header class="hero">
+        <img src="../images/Gaming Accessories hero image.png" alt="Gaming Hero" class="hero-image" />
         <div class="hero-text">
-            <div class="hero-subheading">INTRODUCING</div>
-            <h1 class="hero-heading">
-                Mice – Accuracy &amp; Speed at Your Fingertips
-            </h1>
-            <button class="hero-button">Shop Mice</button>
+          <h1>Gaming Accessories </h1>
+          <p>Get the competitive edge with accessories built for speed, precision, and comfort.</p>
+          <a href="#" class="shop-button">Shop Gaming Gear</a>
         </div>
-    </section>
-
-
-    <div class="hero-content">
-        <div class="video-container">
-            <video src="../images/headphonvedio.mp4" autoplay muted loop playsinline></video>
+      </header>
+    
+      <section class="products">
+        <div class="product-card">
+          <h2>Gaming Keyboards & Mice</h2>
+          <p>Responsive keys and high-DPI sensors for pro-level gaming.</p>
+          <img src="../images/Gaming Keyboards & Mice.jpg" alt="Gaming Keyboards & Mice">
         </div>
-        <div class="text-container">
-            <h2>
-                A perfect mouse makes all the difference! Our collection includes wired, wireless, and gaming mice with
-            </h2>
+        <div class="product-card">
+          <h2>Gaming Controllers</h2>
+          <p>Wireless and wired controllers with haptic feedback.</p>
+          <img src="../images/Gaming Controllers.jpg" alt="Gaming Controllers">
         </div>
-    </div>
-
-
-
-    <div class="hero-list-wrapper">
-        <div class="hero-list">
-            <div class="feature-item">
-                <img src="../images/High-Precision Sensors.jpg" alt="High-Precision Sensor Icon">
-                <div>High-Precision Sensors – Ultra-responsive tracking for gaming and professional work.</div>
-            </div>
-            <div class="feature-item">
-                <img src="../images/Customizable Buttons.webp" alt="Customizable Buttons Icon">
-                <div>Customizable Buttons – Assign functions for quick access and efficiency.</div>
-            </div>
-            <div class="feature-item">
-                <img src="../images/Ergonomic Grip.jpg" alt="Ergonomic Grip Icon">
-                <div>Ergonomic Grip – Comfortable design for extended usage.</div>
-            </div>
-            <div class="feature-item">
-                <img src="../images/RGB & Adjustable DPI.jpg" alt="RGB & DPI Icon">
-                <div>RGB & Adjustable DPI – Personalize your setup and adjust speed as needed.</div>
-            </div>
+        <div class="product-card">
+          <h2>VR Accessories</h2>
+          <p>Take gaming to the next level with virtual reality gear.</p>
+          <img src="../images/VR Accessories.jpg" alt="VR Accessories">
         </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">TechGearX</div>
-            <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
-                08050</p>
-            <p>📍 Location: Chennai, India</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+        <div class="product-card">
+          <h2>Gaming Chairs & Desks</h2>
+          <p>Ergonomic designs for marathon gaming sessions.</p>
+          <img src="../images/Gaming Chairs & Desks.jpg" alt="Gaming Chairs & Desks">
         </div>
-    </footer>
+      </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">TechGearX</div>
+                <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
+                    08050</p>
+                <p>📍 Location: Chennai, India</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    
 </body>
-
 </html>
