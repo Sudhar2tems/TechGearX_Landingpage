@@ -1,0 +1,531 @@
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 48px; /* Increase text size */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Use a clean, bold font */
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  .logo::before {
+    content: "Tech";
+    color: #00C8FF; /* Light blue color */
+  }
+  
+  .logo::after {
+    content: "X";
+    color: #FF8C00; /* Orange color */
+  }
+  
+  .logo {
+    color: #131313; /* White for "Gear" */
+  }
+  
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  /* Active & Hover Styles */
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #ff4600;
+  }
+  
+  /* Parent Dropdown Positioning */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    width: 200px;
+    border-radius: 6px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Dropdown Menu Items */
+  .dropdown-menu li {
+    padding: 12px 20px;
+    background: white;
+    transition: background 0.3s ease;
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu a {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Hover & Clickable Dropdown */
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  /* Hover Effect */
+  .dropdown-menu li:hover {
+    background: #f5f5f5;
+  }
+  
+  /* Mobile Menu Icon */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 10;
+  }
+  
+  /* Menu Styles */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Initially hidden */
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 20;
+    padding: 20px;
+    display: none;
+  
+  }
+  
+  .menu.active {
+    right: 0;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-header img {
+    height: 40px;
+  }
+  
+  .menu-header i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .menu-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .menu-item i {
+    font-size: 14px;
+  }
+  
+  .submenu {
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .submenu .menu-item {
+    background: #f9f9f9;
+  }
+  
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+  
+  }
+
+
+  /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Header Section */
+  header {
+    background: url('../images/backgroundimgformice.jpg') no-repeat center center/cover;
+    color: #111;
+    text-align: center;
+    padding: 100px 20px 60px;
+    
+  }
+  
+  
+  header h1 {
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #222;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+  }
+  
+  /* Features Section */
+  .features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Shop Button */
+  .shop-btn {
+    display: block;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #0066cc, #00aaff);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+  }
+  
+  .shop-btn:hover {
+    background: linear-gradient(135deg, #004a99, #0088cc);
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
+    transform: translateY(-3px);
+  }
+  
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .features-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+  
+    .feature-card {
+      width: 90%;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  }
+  
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black for overlay */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00C8FF; /* Brand blue */
+  }
+  
+  .footer-content p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  .footer-content a {
+    color: #FF8C00; /* Accent color */
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes icons white on dark background */
+  }
+  
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  
+
+  /* Mobile styles (when screen width ≤ 768px) */
+  @media (max-width: 768px) {
+    .top-bar , .fa-search ,.support-btn , .nav-links  {
+        display: none;
+    }
+    
+    /* Menu Icon */
+    .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        display: block; /* Show menu icon */
+    }
+  
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        z-index: 10;
+    }
+  
+    /* Sidebar Menu */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -90%; /* Initially hidden */
+        width: 50%;
+        height: 100%;
+        background: #fff;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        z-index: 20;
+        padding: 20px;
+        display: block; /* Ensure menu is available on mobile */
+        
+    }
+  
+    .menu.active {
+        right: 0;
+    }
+  
+    .overlay.active {
+        display: block;
+    }
+    .fas{
+      color: #000;
+    }
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    .logo-header{
+        font-size: 20px;
+        color: #000;
+    }
+    
+    .logo-header::before {
+        content: "Tech";
+        color: #00C8FF; /* Light blue color */
+    }
+    
+    .logo-header::after {
+        content: "X";
+        color: #FF8C00; /* Orange color */
+    }
+  
+    .logo {
+        font-size: 32px; /* Adjust for smaller screens */
+    }
+  
+    .menu-header i {
+        font-size: 24px;
+        cursor: pointer;
+    }
+  
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+  
+    .menu-item {
+        color: #000;
+        padding: 12px 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+    }
+  
+    .menu-item i {
+        font-size: 14px;
+    }
+  
+    .submenu {
+        display: none;
+        padding-left: 20px;
+    }
+  
+    .submenu .menu-item {
+        background: #f9f9f9;
+    }
+    .footer-logo {
+        font-size: 24px;
+      }
+      
+      .footer-content p {
+        font-size: 14px;
+      }
+      
+      .social-links img {
+        width: 25px;
+        height: 25px;
+      }
+      }
+      
+      
+      /* Media Query for Tablets (768px and below) */
+      @media screen and (max-width: 768px) {
+        .logo img  {
+            height: 580px; /* Reduce size for tablets */
+            margin-bottom: 40px;
+        }
+        .menu-header .image {
+            height: 0px;
+        }
+      }
+      
+      /* Media Query for Mobile Devices (480px and below) */
+      @media screen and (max-width: 480px) {
+        .logo img {
+            height: 100px; /* Smaller for mobile */
+            margin-bottom: 20px;
+        }
+        .menu-header .image {
+            height: 50px;
+        }
+      }
+      
