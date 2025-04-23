@@ -1,202 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Insights- TechGearX</title>
-    <link rel="stylesheet" href="../css/blog.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="../images/favicon.jpg"sizes="32x32">
-    <script defer src="../javascript/blog.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights- TechGearX</title>
+  <link rel="stylesheet" href="../css/blog.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="../images/favicon.jpg" sizes="32x32">
+  <script defer src="../javascript/blog.js"></script>
 </head>
+
 <body>
 
-      <!-- Navigation Bar -->
-      <nav class="navbar">
-        <div class="logo">Gear</div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Gear</div>
 
-        <ul class="nav-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="../html/about.html">About</a></li>
-           
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
-           
-                <ul class="dropdown-menu">
-                    <li><a href="../html/keyboard.html">Keyboards</a></li>
-                    <li><a href="../html/mice.html">Mice</a></li>
-                    <li><a href="../html/headset.html">Headsets</a></li>
-                    <li><a href="../html/accessories.html">Gaming Accessories</a></li>
-                    <li><a href="../html/cables.html">Cables & Adapters</a></li>
-                    <li><a href="../html/storage.html">Storage Devices</a></li>
-                </ul>
-            </li>
-           
-            <li><a href="../html/deals.html">Deals</a></li>
-            <li><a href="../html/support.html">Support</a></li>
-            <li><a href="../html/blog.html">Blog & Insights</a></li>    
-            <li><a href="../html/contact.html">Contact</a></li>
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="../html/about.html">About</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Products <i class="fas fa-chevron-down"></i></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="../html/keyboard.html">Keyboards</a></li>
+          <li><a href="../html/mice.html">Mice</a></li>
+          <li><a href="../html/headset.html">Headsets</a></li>
+          <li><a href="../html/accessories.html">Gaming Accessories</a></li>
+          <li><a href="../html/cables.html">Cables & Adapters</a></li>
+          <li><a href="../html/storage.html">Storage Devices</a></li>
         </ul>
+      </li>
+
+      <li><a href="../html/deals.html">Deals</a></li>
+      <li><a href="../html/support.html">Support</a></li>
+      <li><a href="../html/blog.html">Blog & Insights</a></li>
+      <li><a href="../html/contact.html">Contact</a></li>
+    </ul>
 
 
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-
-    </nav>
-
-    <!-- Mobile Menu -->
-
-
-    <!-- Overlay -->
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-    <!-- Sidebar Menu -->
-    <div class="menu" id="menu">
-        <div class="menu-header">
-            <div class="logo-header">Gear</div>
-            <i class="fas fa-times" onclick="toggleMenu()"></i>
-        </div>
-        <ul>
-            <li class="menu-item"><a href="./index.html">Home</a></li>
-            <li class="menu-item"><a href="../html/about.html">About</a></li>
-            
-            <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
-                Products <i class="fas fa-plus"></i>
-            </li>
-            
-            <ul class="submenu" id="products-submenu">
-                <li class="menu-item"><a href="../html/keyboard.html">Keyboards</a></li>
-                <li class="menu-item"><a href="../html/mice.html">Mice</a></li>
-                <li class="menu-item"><a href="../html/headset.html">Headsets</a></li>
-                <li class="menu-item"><a href="../html/accessories.html">Gaming Accessories</a></li>
-                <li class="menu-item"><a href="../html/cables.html">Cables & Adapters</a></li>
-                <li class="menu-item"><a href="../html/storage.html">Storage Devices</a></li>
-            </ul>
-            
-            <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
-            <li class="menu-item"><a href="../html/blog.html">Blog & Insights</a></li>
-            <li class="menu-item"><a href="../html/support.html">Support</a></li>
-            <li class="menu-item"><a href="../html/contact.html">Contact</a></li>
-        </ul>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
 
-    <header>
-        <h1>Blog & Insights</h1>
-      </header>
-    
-      <div class="container">
-        <div class="main-post">
-          <img src="../images/bloginsight1.jpg" alt="Blog Thumbnail" />
-          <div class="content">
-            <span class="tag">Team development</span>
-            <h2>How to Build the Perfect Work-from-Home Setup</h2>
-            <p>Explore expert insights, product reviews, and technology updates on the TechGearX Blog.</p>
-            <a class="read-more" href="#">Read More →</a>
-          </div>
-        </div>
-    
-        <div class="featured">
-          <h3>Featured Articles</h3>
-          <div class="featured-post">
-            <img src="../images/RGB-keyboards.webp" />
-            <div>
-              <p class="tag">Top 5 Mechanical Keyboards</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
-          <div class="featured-post">
-            <img src="../images/Headset.jpg" />
-            <div>
-              <p class="tag">Top 5 Best Headsets for 2025</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
-          <div class="featured-post">
-            <img src="../images/Cables.jpeg" />
-            <div>
-              <p class="tag">Top 5 Cables Guide for 2025</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
-          <div class="featured-post">
-            <img src="../images/adapter.jpg" />
-            <div>
-              <p class="tag"> Top 5 Adapters Guide</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
-          <div class="featured-post">
-            <img src="../images/GamingAccessories.webp" />
-            <div>
-              <p class="tag">Top 5 Best Game Accessories</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
-          <div class="featured-post">
-            <img src="../images/Storage Super Saver.jpg" />
-            <div>
-              <p class="tag">Top 5 Best Storage Devices</p>
-              <a class="read-more" href="#">Read More →</a>
-            </div>
-          </div>
+  </nav>
 
+  <!-- Mobile Menu -->
+
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Sidebar Menu -->
+  <div class="menu" id="menu">
+    <div class="menu-header">
+      <div class="logo-header">Gear</div>
+      <i class="fas fa-times" onclick="toggleMenu()"></i>
+    </div>
+    <ul>
+      <li class="menu-item"><a href="./index.html">Home</a></li>
+      <li class="menu-item"><a href="../html/about.html">About</a></li>
+
+      <li class="menu-item" onclick="toggleSubMenu('products-submenu', this)">
+        Products <i class="fas fa-plus"></i>
+      </li>
+
+      <ul class="submenu" id="products-submenu">
+        <li class="menu-item"><a href="../html/keyboard.html">Keyboards</a></li>
+        <li class="menu-item"><a href="../html/mice.html">Mice</a></li>
+        <li class="menu-item"><a href="../html/headset.html">Headsets</a></li>
+        <li class="menu-item"><a href="../html/accessories.html">Gaming Accessories</a></li>
+        <li class="menu-item"><a href="../html/cables.html">Cables & Adapters</a></li>
+        <li class="menu-item"><a href="../html/storage.html">Storage Devices</a></li>
+      </ul>
+
+      <li class="menu-item"><a href="../html/deals.html">Deals</a></li>
+      <li class="menu-item"><a href="../html/blog.html">Blog & Insights</a></li>
+      <li class="menu-item"><a href="../html/support.html">Support</a></li>
+      <li class="menu-item"><a href="../html/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <h1>Blog & Insights</h1>
+  </header>
+
+  <div class="container">
+    <div class="main-post">
+      <img src="../images/bloginsight1.jpg" alt="Blog Thumbnail" />
+      <div class="content">
+        <span class="tag">Team development</span>
+        <h2>How to Build the Perfect Work-from-Home Setup</h2>
+        <p>Explore expert insights, product reviews, and technology updates on the TechGearX Blog.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+    </div>
+
+    <div class="featured">
+      <h3>Featured Articles</h3>
+      <div class="featured-post">
+        <img src="../images/RGB-keyboards.webp" />
+        <div>
+          <p class="tag">Top 5 Mechanical Keyboards</p>
+          <a class="read-more" href="#">Read More →</a>
         </div>
       </div>
-    
-    
-      <div class="all-posts">
-        <div class="post-card">
-          <img src="../images/what-is-a-blog-35.png" />
-          <div class="info">
-            <span class="tag">Team development</span>
-            <h3>Perfect Work-from-Home Setup</h3>
-            <p>Tools to boost productivity and comfort while working remotely.</p>
-            <a class="read-more" href="#">Read More →</a>
-          </div>
-        </div>
-
-        <div class="post-card">
-          <img src="../images/bloginsight8.jpg" />
-          <div class="info">
-            <span class="tag">Gaming</span>
-            <h3>Gaming Gear 101</h3>
-            <p>Essential accessories for serious gamers — peak precision guaranteed.</p>
-            <a class="read-more" href="#">Read More →</a>
-          </div>
-        </div>
-    
-        <div class="post-card">
-          <img src="../images/bloginsight2.jpg" />
-          <div class="info">
-            <span class="tag">Performance</span>
-            <h3>Improve Your PC Performance</h3>
-            <p>Speed up your setup with optimized accessories and pro tips.</p>
-            <a class="read-more" href="#">Read More →</a>
-          </div>
+      <div class="featured-post">
+        <img src="../images/Headset.jpg" />
+        <div>
+          <p class="tag">Top 5 Best Headsets for 2025</p>
+          <a class="read-more" href="#">Read More →</a>
         </div>
       </div>
-    
-      <footer>
-        📢 Subscribe to TechGearX blog for fresh content, tips, and product news!
-      </footer>
-
-            <!-- Footer Section -->
-    <Section class="footer-context">
-        <div class="footer-content">
-            <div class="footer-logo">TechGearX</div>
-            <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
-                08050</p>
-            <p>📍 Location: Chennai, India</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+      <div class="featured-post">
+        <img src="../images/Cables.jpeg" />
+        <div>
+          <p class="tag">Top 5 Cables Guide for 2025</p>
+          <a class="read-more" href="#">Read More →</a>
         </div>
-    </Section>
+      </div>
+      <div class="featured-post">
+        <img src="../images/adapter.jpg" />
+        <div>
+          <p class="tag"> Top 5 Adapters Guide</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="featured-post">
+        <img src="../images/GamingAccessories.webp" />
+        <div>
+          <p class="tag">Top 5 Best Game Accessories</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="featured-post">
+        <img src="../images/Storage Super Saver.jpg" />
+        <div>
+          <p class="tag">Top 5 Best Storage Devices</p>
+          <a class="read-more" href="#">Read More →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="all-posts">
+    <div class="post-card">
+      <img src="../images/what-is-a-blog-35.png" />
+      <div class="info">
+        <span class="tag">Team development</span>
+        <h3>Perfect Work-from-Home Setup</h3>
+        <p>Tools to boost productivity and comfort while working remotely.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="../images/bloginsight8.jpg" />
+      <div class="info">
+        <span class="tag">Gaming</span>
+        <h3>Gaming Gear 101</h3>
+        <p>Essential accessories for serious gamers — peak precision guaranteed.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="../images/bloginsight2.jpg" />
+      <div class="info">
+        <span class="tag">Performance</span>
+        <h3>Improve Your PC Performance</h3>
+        <p>Speed up your setup with optimized accessories and pro tips.</p>
+        <a class="read-more" href="#">Read More →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    📢 Subscribe to TechGearX blog for fresh content, tips, and product news!
+  </footer>
+
+  <!-- Footer Section -->
+  <Section class="footer-context">
+    <div class="footer-content">
+      <div class="footer-logo">TechGearX</div>
+      <p>📞 Need Help? Contact Us: <a href="mailto:support@techgearx.com">support@techgearx.com</a> | +91 90506
+        08050</p>
+      <p>📍 Location: Chennai, India</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </Section>
 
 
 </body>
+
 </html>

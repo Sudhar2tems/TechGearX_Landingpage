@@ -1,295 +1,285 @@
 /* Navigation Bar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .logo {
-    font-size: 48px; /* Increase text size */
-    font-weight: bold;
-    font-family: 'Arial', sans-serif; /* Use a clean, bold font */
-    padding: 10px 20px;
-    display: inline-block;
-  }
-  
-  .logo::before {
-    content: "Tech";
-    color: #00C8FF; /* Light blue color */
-  }
-  
-  .logo::after {
-    content: "X";
-    color: #FF8C00; /* Orange color */
-  }
-  
-  .logo {
-    color: #131313; /* White for "Gear" */
-  }
-  
-  
-  /* Navigation Links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links li {
-    position: relative;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px;
-  }
-  
-  /* Active & Hover Styles */
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #ff4600;
-  }
-  
-  /* Parent Dropdown Positioning */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    display: none;
-    list-style: none;
-    padding: 10px 0;
-    width: 200px;
-    border-radius: 6px;
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Dropdown Menu Items */
-  .dropdown-menu li {
-    padding: 12px 20px;
-    background: white;
-    transition: background 0.3s ease;
-  }
-  
-  /* Dropdown Links */
-  .dropdown-menu a {
-    color: black;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Hover & Clickable Dropdown */
-  .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  
-  /* Hover Effect */
-  .dropdown-menu li:hover {
-    background: #f5f5f5;
-  }
-  
-  /* Mobile Menu Icon */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  /* Overlay */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    z-index: 10;
-  }
-  
-  /* Menu Styles */
-  .menu {
-    position: fixed;
-    top: 0;
-    right: -50%; /* Initially hidden */
-    width: 50%;
-    height: 100%;
-    background: #fff;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease-in-out;
-    z-index: 20;
-    padding: 20px;
-    display: none;
-  
-  }
-  
-  .menu.active {
-    right: 0;
-  }
-  
-  .overlay.active {
-    display: block;
-  }
-  
-  .menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .menu-header img {
-    height: 40px;
-  }
-  
-  .menu-header i {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  .menu-item {
-    padding: 12px 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .menu-item i {
-    font-size: 14px;
-  }
-  
-  .submenu {
-    display: none;
-    padding-left: 20px;
-  }
-  
-  .submenu .menu-item {
-    background: #f9f9f9;
-  }
-  
-  .menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    display: none;
-  
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
-  
-  
-  /* General Container */
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  /* Image Banner */
-  
-  .about-image-container {
-    max-width: 1000px; /* same as Grafdom layout */
-    margin: 0 auto;     /* centers the container */
-    padding: 0 15px;    /* optional padding for small screens */
-  }
-  
-  .about-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+.logo {
+  font-size: 48px;
+  /* Increase text size */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  /* Use a clean, bold font */
+  padding: 10px 20px;
+  display: inline-block;
+}
 
-  /* Text Section */
-  .about-content {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
-  
-  .about-content h2 {
-    color: #222;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    border-left: 5px solid #007f2d;
-    padding-left: 10px;
-  }
-  
-  .about-content h3 {
-    color: #007f2d;
-    margin-top: 30px;
-    font-size: 1.4rem;
-  }
-  
-  .about-content p {
-    margin-bottom: 16px;
-  }
-  
-  .about-content .highlight {
-    color: #007f2d;
-    font-weight: 600;
-  }
-  
-  .about-content ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-  
-  .about-content li {
-    margin-bottom: 10px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .about-image-title {
-      font-size: 1.2rem;
-      padding: 8px 16px;
-    }
-  
-    .about-content h2 {
-      font-size: 1.4rem;
-    }
-  
-    .about-content h3 {
-      font-size: 1.2rem;
-    }
-  
-    .about-content, .about-image-container {
-      padding: 0 15px;
-    }
-  }
-  
+.logo::before {
+  content: "Tech";
+  color: #00C8FF;
+  /* Light blue color */
+}
+
+.logo::after {
+  content: "X";
+  color: #FF8C00;
+  /* Orange color */
+}
+
+.logo {
+  color: #131313;
+  /* White for "Gear" */
+}
+
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/* Active & Hover Styles */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4600;
+}
+
+/* Parent Dropdown Positioning */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 6px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  padding: 12px 20px;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover & Clickable Dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Hover Effect */
+.dropdown-menu li:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile Menu Icon */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10;
+}
+
+/* Menu Styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  /* Initially hidden */
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 20;
+  padding: 20px;
+  display: none;
+
+}
+
+.menu.active {
+  right: 0;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-header img {
+  height: 40px;
+}
+
+.menu-header i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menu-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item i {
+  font-size: 14px;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.submenu .menu-item {
+  background: #f9f9f9;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: none;
+
+}
+
+
+
+/* General Container */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Image Banner */
+
+.about-image-container {
+  max-width: 1000px;
+  /* same as Grafdom layout */
+  margin: 0 auto;
+  /* centers the container */
+  padding: 0 15px;
+  /* optional padding for small screens */
+}
+
+.about-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Text Section */
+.about-content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.about-content h2 {
+  color: #222;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  border-left: 5px solid #007f2d;
+  padding-left: 10px;
+}
+
+.about-content h3 {
+  color: #007f2d;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+.about-content p {
+  margin-bottom: 16px;
+}
+
+.about-content .highlight {
+  color: #007f2d;
+  font-weight: 600;
+}
+
+.about-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-content li {
+  margin-bottom: 10px;
+}
+
 /* WHO WE ARE Section */
 /* WHO WE ARE SECTION */
 .who-we-are-section {
@@ -355,30 +345,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .who-we-are-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .who-we-are-text {
-    flex: 1 1 100%;
-  }
-  .who-we-are-paragraph{
-    text-align: justify;
-  }
-
-  .who-we-are-image {
-    flex: 1 1 100%;
-    margin-top: 20px;
-  }
-
-  .who-we-are-list {
-    padding-left: 10px;
-    text-align: left;
-  }
-}
 
 
 /* What We Offer Section */
@@ -443,30 +409,6 @@
   font-size: 1.2rem;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .tgx-offer-container {
-    flex-direction: column-reverse; /* 👈 Flip the order */
-    text-align: center;
-  }
-
-  .tgx-offer-image-wrapper,
-  .tgx-offer-content {
-    flex: 1 1 100%;
-  }
-
-  .tgx-offer-list {
-    text-align: left;
-    margin-top: 20px;
-  }
-  .tgx-offer-description{
-    text-align: justify;
-  }
-
-}
-
-
-
 
 /* MISSION & VISION SECTION */
 .tgx-mission-vision-section {
@@ -512,23 +454,6 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .tgx-mission-vision-container {
-    flex-direction: column-reverse; /* 👈 This flips text above image */
-    text-align: center;
-  }
-
-  .tgx-mission-vision-content,
-  .tgx-mission-vision-image-wrapper {
-    flex: 1 1 100%;
-  }
-
-  .tgx-mission-vision-paragraph {
-    text-align: left;
-  }
-}
-
 
 /* Why Choose TechGearX Section */
 .tgx-why-choose-us-section {
@@ -540,7 +465,8 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row; /* ensures image stays on right in desktop */
+  flex-direction: row;
+  /* ensures image stays on right in desktop */
   align-items: center;
   justify-content: space-between;
   gap: 40px;
@@ -592,30 +518,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .tgx-why-choose-us-container {
-    flex-direction: column-reverse; /* 👈 Puts image below text */
-  }
-
-  .tgx-why-choose-us-text,
-  .tgx-why-choose-us-image {
-    flex: 1 1 100%;
-  }
-
-  .tgx-why-choose-us-feature-box {
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .tgx-why-choose-us-image {
-    margin-top: 20px;
-  }
-}
-
-
-
-/* Community Section */ 
+/* Community Section */
 #tgx-community-section {
   background: linear-gradient(to bottom right, #000000dd, #1a1a1aee);
   color: white;
@@ -629,7 +532,8 @@
   display: flex;
   gap: 50px;
   justify-content: space-between;
-  flex-wrap: wrap; /* Ensures wrapping on small screens */
+  flex-wrap: wrap;
+  /* Ensures wrapping on small screens */
 }
 
 .tgx-community-left,
@@ -697,8 +601,228 @@
   font-size: 18px;
 }
 
-/* Responsive Styling */
+
+
+/* Mobile styles (when screen width ≤ 768px) */
 @media (max-width: 768px) {
+
+  .top-bar,
+  .fa-search,
+  .support-btn,
+  .nav-links {
+    display: none;
+  }
+
+  /* Menu Icon */
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    /* Show menu icon */
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 10;
+  }
+
+  /* Sidebar Menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -90%;
+    /* Initially hidden */
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 20;
+    padding: 20px;
+    display: block;
+    /* Ensure menu is available on mobile */
+
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .fas {
+    color: #000;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo-header {
+    font-size: 20px;
+    color: #000;
+  }
+
+  .logo-header::before {
+    content: "Tech";
+    color: #00C8FF;
+    /* Light blue color */
+  }
+
+  .logo-header::after {
+    content: "X";
+    color: #FF8C00;
+    /* Orange color */
+  }
+
+  .logo {
+    font-size: 32px;
+    /* Adjust for smaller screens */
+  }
+
+  .menu-header i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .menu-item {
+    color: #000;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-item i {
+    font-size: 14px;
+  }
+
+  .submenu {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .submenu .menu-item {
+    background: #f9f9f9;
+  }
+
+  .about-image-title {
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+
+  .about-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-content,
+  .about-image-container {
+    padding: 0 15px;
+  }
+
+  .who-we-are-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who-we-are-text {
+    flex: 1 1 100%;
+  }
+
+  .who-we-are-paragraph {
+    text-align: justify;
+  }
+
+  .who-we-are-image {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .who-we-are-list {
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .tgx-offer-container {
+    flex-direction: column-reverse;
+    /* 👈 Flip the order */
+    text-align: center;
+  }
+
+  .tgx-offer-image-wrapper,
+  .tgx-offer-content {
+    flex: 1 1 100%;
+  }
+
+  .tgx-offer-list {
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .tgx-offer-description {
+    text-align: justify;
+  }
+
+  .tgx-mission-vision-container {
+    flex-direction: column-reverse;
+    /* 👈 This flips text above image */
+    text-align: center;
+  }
+
+  .tgx-mission-vision-content,
+  .tgx-mission-vision-image-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .tgx-mission-vision-paragraph {
+    text-align: left;
+  }
+
+  .tgx-why-choose-us-container {
+    flex-direction: column-reverse;
+    /* 👈 Puts image below text */
+  }
+
+  .tgx-why-choose-us-text,
+  .tgx-why-choose-us-image {
+    flex: 1 1 100%;
+  }
+
+  .tgx-why-choose-us-feature-box {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .tgx-why-choose-us-image {
+    margin-top: 20px;
+  }
+
   .tgx-community-container {
     flex-direction: column;
   }
@@ -713,119 +837,3 @@
     justify-content: center;
   }
 }
-
-  /* Mobile styles (when screen width ≤ 768px) */
-@media (max-width: 768px) {
-    .top-bar , .fa-search ,.support-btn , .nav-links  {
-        display: none;
-    }
-    
-    /* Menu Icon */
-    .menu-icon {
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-        display: block; /* Show menu icon */
-    }
-  
-    /* Overlay */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        display: none;
-        z-index: 10;
-    }
-  
-    /* Sidebar Menu */
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -90%; /* Initially hidden */
-        width: 50%;
-        height: 100%;
-        background: #fff;
-        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease-in-out;
-        z-index: 20;
-        padding: 20px;
-        display: block; /* Ensure menu is available on mobile */
-        
-    }
-  
-    .menu.active {
-        right: 0;
-    }
-  
-    .overlay.active {
-        display: block;
-    }
-    .fas{
-      color: #000;
-    }
-    .menu-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-    .logo-header{
-        font-size: 20px;
-        color: #000;
-    }
-    
-    .logo-header::before {
-        content: "Tech";
-        color: #00C8FF; /* Light blue color */
-    }
-    
-    .logo-header::after {
-        content: "X";
-        color: #FF8C00; /* Orange color */
-    }
-  
-    .logo {
-        font-size: 32px; /* Adjust for smaller screens */
-    }
-  
-    .menu-header i {
-        font-size: 24px;
-        cursor: pointer;
-    }
-  
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-    }
-  
-    .menu-item {
-        color: #000;
-        padding: 12px 15px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-    }
-  
-    .menu-item i {
-        font-size: 14px;
-    }
-  
-    .submenu {
-        display: none;
-        padding-left: 20px;
-    }
-  
-    .submenu .menu-item {
-        background: #f9f9f9;
-    }
-
-    
-  
-  }

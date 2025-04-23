@@ -1,213 +1,232 @@
 /* Navigation Bar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  .logo {
-    font-size: 48px; /* Increase text size */
-    font-weight: bold;
-    font-family: 'Arial', sans-serif; /* Use a clean, bold font */
-    padding: 10px 20px;
-    display: inline-block;
-  }
-  
-  .logo::before {
-    content: "Tech";
-    color: #00C8FF; /* Light blue color */
-  }
-  
-  .logo::after {
-    content: "X";
-    color: #FF8C00; /* Orange color */
-  }
-  
-  .logo {
-    color: #131313; /* White for "Gear" */
-  }
-  
-  
-  /* Navigation Links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-  }
-  
-  .nav-links li {
-    position: relative;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 10px;
-  }
-  
-  /* Active & Hover Styles */
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: #ff4600;
-  }
-  
-  /* Parent Dropdown Positioning */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Menu */
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    display: none;
-    list-style: none;
-    padding: 10px 0;
-    width: 200px;
-    border-radius: 6px;
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Dropdown Menu Items */
-  .dropdown-menu li {
-    padding: 12px 20px;
-    background: white;
-    transition: background 0.3s ease;
-  }
-  
-  /* Dropdown Links */
-  .dropdown-menu a {
-    color: black;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Hover & Clickable Dropdown */
-  .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu {
-    display: block;
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  
-  /* Hover Effect */
-  .dropdown-menu li:hover {
-    background: #f5f5f5;
-  }
-  
-  /* Mobile Menu Icon */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  /* Overlay */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    z-index: 10;
-  }
-  
-  /* Menu Styles */
-  .menu {
-    position: fixed;
-    top: 0;
-    right: -50%; /* Initially hidden */
-    width: 50%;
-    height: 100%;
-    background: #fff;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease-in-out;
-    z-index: 20;
-    padding: 20px;
-    display: none;
-  
-  }
-  
-  .menu.active {
-    right: 0;
-  }
-  
-  .overlay.active {
-    display: block;
-  }
-  
-  .menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .menu-header img {
-    height: 40px;
-  }
-  
-  .menu-header i {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  .menu-item {
-    padding: 12px 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .menu-item i {
-    font-size: 14px;
-  }
-  
-  .submenu {
-    display: none;
-    padding-left: 20px;
-  }
-  
-  .submenu .menu-item {
-    background: #f9f9f9;
-  }
-  
-  .menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    display: none;
-  
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
 
-  * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+.logo {
+  font-size: 48px;
+  /* Increase text size */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  /* Use a clean, bold font */
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.logo::before {
+  content: "Tech";
+  color: #00C8FF;
+  /* Light blue color */
+}
+
+.logo::after {
+  content: "X";
+  color: #FF8C00;
+  /* Orange color */
+}
+
+.logo {
+  color: #131313;
+  /* White for "Gear" */
+}
+
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/* Active & Hover Styles */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4600;
+}
+
+/* Parent Dropdown Positioning */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+  list-style: none;
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 6px;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  padding: 12px 20px;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+/* Dropdown Links */
+.dropdown-menu a {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover & Clickable Dropdown */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Hover Effect */
+.dropdown-menu li:hover {
+  background: #f5f5f5;
+}
+
+/* Mobile Menu Icon */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 10;
+}
+
+/* Menu Styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  /* Initially hidden */
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 20;
+  padding: 20px;
+  display: none;
+
+}
+
+.menu.active {
+  right: 0;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-header img {
+  height: 40px;
+}
+
+.menu-header i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menu-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item i {
+  font-size: 14px;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.submenu .menu-item {
+  background: #f9f9f9;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  display: none;
+
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0
+}
+
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -217,7 +236,8 @@ img {vertical-align: middle;}
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -239,8 +259,9 @@ img {vertical-align: middle;}
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Fading animation */
@@ -250,14 +271,15 @@ img {vertical-align: middle;}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
 
 /* Reset and base styles */
 body {
@@ -354,23 +376,10 @@ header p {
   background-color: #005f2e;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .feature {
-    width: 90%;
-  }
-  header p{
-    text-align: justify;
-  }
-}
 
 footer {
-  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black for overlay */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Slightly transparent black for overlay */
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -386,7 +395,8 @@ footer {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #00C8FF; /* Brand blue */
+  color: #00C8FF;
+  /* Brand blue */
 }
 
 .footer-content p {
@@ -396,7 +406,8 @@ footer {
 }
 
 .footer-content a {
-  color: #FF8C00; /* Accent color */
+  color: #FF8C00;
+  /* Accent color */
   text-decoration: none;
 }
 
@@ -417,7 +428,8 @@ footer {
 .social-links img {
   width: 30px;
   height: 30px;
-  filter: brightness(0) invert(1); /* Makes icons white on dark background */
+  filter: brightness(0) invert(1);
+  /* Makes icons white on dark background */
 }
 
 .social-links a:hover {
@@ -427,129 +439,167 @@ footer {
 
 /* Mobile styles (when screen width ≤ 768px) */
 @media (max-width: 768px) {
-    .top-bar , .fa-search ,.support-btn , .nav-links  {
-        display: none;
-    }
-    
-    /* Menu Icon */
-    .menu-icon {
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-        display: block; /* Show menu icon */
-    }
-  
-    /* Overlay */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        display: none;
-        z-index: 10;
-    }
-  
-    /* Sidebar Menu */
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -90%; /* Initially hidden */
-        width: 50%;
-        height: 100%;
-        background: #fff;
-        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease-in-out;
-        z-index: 20;
-        padding: 20px;
-        display: block; /* Ensure menu is available on mobile */
-        
-    }
-  
-    .menu.active {
-        right: 0;
-    }
-  
-    .overlay.active {
-        display: block;
-    }
-    .fas{
-      color: #000;
-    }
-    .menu-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-    .logo-header{
-        font-size: 20px;
-        color: #000;
-    }
-    
-    .logo-header::before {
-        content: "Tech";
-        color: #00C8FF; /* Light blue color */
-    }
-    
-    .logo-header::after {
-        content: "X";
-        color: #FF8C00; /* Orange color */
-    }
-  
-    .logo {
-        font-size: 32px; /* Adjust for smaller screens */
-    }
-  
-    .menu-header i {
-        font-size: 24px;
-        cursor: pointer;
-    }
-  
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0;
-    }
-  
-    .menu-item {
-        color: #000;
-        padding: 12px 15px;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-    }
-  
-    .menu-item i {
-        font-size: 14px;
-    }
-  
-    .submenu {
-        display: none;
-        padding-left: 20px;
-    }
-  
-    .submenu .menu-item {
-        background: #f9f9f9;
-    }
 
-    
-    .footer-logo {
-      font-size: 24px;
-    }
-    
-    .footer-content p {
-      font-size: 14px;
-    }
-    
-    .social-links img {
-      width: 25px;
-      height: 25px;
-    }
-   
+  .top-bar,
+  .fa-search,
+  .support-btn,
+  .nav-links {
+    display: none;
   }
-  
+
+  /* Menu Icon */
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    /* Show menu icon */
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 10;
+  }
+
+  /* Sidebar Menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -90%;
+    /* Initially hidden */
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 20;
+    padding: 20px;
+    display: block;
+    /* Ensure menu is available on mobile */
+
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  .fas {
+    color: #000;
+  }
+
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo-header {
+    font-size: 20px;
+    color: #000;
+  }
+
+  .logo-header::before {
+    content: "Tech";
+    color: #00C8FF;
+    /* Light blue color */
+  }
+
+  .logo-header::after {
+    content: "X";
+    color: #FF8C00;
+    /* Orange color */
+  }
+
+  .logo {
+    font-size: 32px;
+    /* Adjust for smaller screens */
+  }
+
+  .menu-header i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .menu-item {
+    color: #000;
+    padding: 12px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-item i {
+    font-size: 14px;
+  }
+
+  .submenu {
+    display: none;
+    padding-left: 20px;
+  }
+
+  .submenu .menu-item {
+    background: #f9f9f9;
+  }
+
+
+  .footer-logo {
+    font-size: 24px;
+  }
+
+  .footer-content p {
+    font-size: 14px;
+  }
+
+  .social-links img {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+
+  header p {
+    text-align: justify;
+  }
+}
