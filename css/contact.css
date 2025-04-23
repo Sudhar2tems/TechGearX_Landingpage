@@ -745,6 +745,12 @@ footer {
     width: 25px;
     height: 25px;
   }
+  .info-card,
+  .info-card-down {
+    height: 140px;
+    padding: 15px;
+    width: 300px;
+  }
 
 }
 
