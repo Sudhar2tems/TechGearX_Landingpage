@@ -14,12 +14,17 @@
 
 - **Responsive Design** – Mobile-first approach using media queries.
 
-**🙌 Credits**
+## 🌐 Live Preview
+
+🚀 **[https://github.com/Sudhar2tems/TechGearX_Landingpage/deployments/github-pages](#)** (Insert your hosted link here)
+
+
+## 🙌 Credits
 
 Icons from Font Awesome
 
 Images are placeholders or royalty-free (Unsplash/Pexels)
 
-**📬 Feedback**
+## 📬 Feedback
 
 Found a bug or want to suggest an improvement? Feel free to open an issue or fork the repo!
