@@ -16,7 +16,7 @@
 
 ## 🌐 Live Preview
 
-🚀 **[https://github.com/Sudhar2tems/TechGearX_Landingpage/deployments/github-pages](#)** 
+🚀 **[https://sudhar2tems.github.io/TechGearX_Landingpage/index.html](#)** 
 
 
 ## 🙌 Credits
